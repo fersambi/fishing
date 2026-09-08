@@ -74,12 +74,12 @@ def truncate(value, size=1000):
     return value[:size]
 
 
-def safe_value(value):
+def safe_value(value, size=1000):
     """
     Evita que conteúdo enviado pelo navegador seja usado para criar
     uma quantidade excessiva de texto no documento.
     """
-    return truncate(value, 1000).replace("\r", " ").replace("\n", " ")
+    return truncate(value, size).replace("\r", " ").replace("\n", " ")
 
 
 def browser_from_user_agent(ua):
