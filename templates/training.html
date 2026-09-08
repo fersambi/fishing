@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SUAP — Simulação Educacional</title>
+<style>
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#555;background:linear-gradient(105deg,#3f3f3f 0%,#565656 43%,#777 100%);overflow:auto}
+.sim{position:fixed;z-index:20;top:0;left:0;right:0;background:#f4c542;color:#292929;text-align:center;padding:8px 12px;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:438px;padding:158px 60px 40px 57px;color:#eee;background:rgba(42,42,42,.20)}
+.brand-side{font-size:42px;line-height:1;font-weight:300;letter-spacing:-2px;margin-bottom:52px;color:#eee}
+.group{margin-bottom:28px}.group-title{font-size:14px;color:#bbb;margin-bottom:7px}
+.item{height:47px;border-bottom:1px solid rgba(255,255,255,.10);display:flex;align-items:center;gap:12px;color:#f4f4f4;font-size:17px;padding:0 2px}
+.icon{width:18px;text-align:center;color:#aaa;font-size:17px}
+.content{min-height:100vh;margin-left:438px;position:relative;padding-top:166px}
+.card{width:750px;min-height:795px;margin:0 auto;background:#fff;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,.28);padding:72px 74px 60px}
+.logo{text-align:center;margin-bottom:55px;color:#9b9b9b;font-size:65px;line-height:.8;letter-spacing:-6px;font-weight:300}
+.logo small{display:block;font-size:16px;line-height:1.05;letter-spacing:-.5px;color:#666;margin-top:11px;font-weight:400}
+.section-title{height:43px;border-bottom:1px solid #eee;color:#b7b7b7;font-size:22px;display:flex;align-items:center;gap:10px;margin-bottom:30px}
+.lock{font-size:23px;color:#c6c6c6}
+label{display:block;font-size:16px;color:#555;margin:0 0 7px}
+input[type=text],input[type=password]{width:100%;height:56px;border:2px solid #d2d2d2;border-radius:5px;outline:none;font-size:18px;padding:8px 12px;margin-bottom:19px;background:#fff}
+input:focus{border-color:#aaa}
+.ext{font-size:16px;color:#666;display:flex;align-items:center;gap:8px;margin:1px 0 48px}.ext input{width:16px;height:16px}
+button{width:100%;height:55px;border:0;border-radius:28px;background:#27a85d;color:#fff;font-size:18px;cursor:pointer}
+.links{margin-top:27px;text-align:right;font-size:15px;line-height:2.7}.links a{color:#2c7e39;text-decoration:none}
+.footer{color:#cfcfcf;text-align:center;font-size:15px;margin:57px auto 0}.footer span{color:#58a36a}
+.reveal{display:none;margin-top:28px;padding:18px;border-radius:5px;background:#eef8f1;border:1px solid #b7dfc3;color:#2f6f40;font-size:15px;line-height:1.5}
+@media(max-width:1050px){.sidebar{width:300px;padding-left:35px;padding-right:25px}.content{margin-left:300px}.card{width:min(750px,calc(100% - 40px))}}
+@media(max-width:760px){.sidebar{display:none}.content{margin-left:0;padding-top:85px}.card{min-height:0;padding:45px 30px}.footer{margin-bottom:30px}}
+</style>
+</head>
+<body>
+<div class="sim">SIMULAÇÃO EDUCACIONAL DE ANTI-PHISHING — esta página não é o SUAP e não coleta nem armazena credenciais.</div>
+<aside class="sidebar">
+<div class="brand-side">suap</div>
+<div class="group"><div class="group-title">ACESSOS</div>
+<div class="item"><span class="icon">▣</span><b>Login</b></div>
+<div class="item"><span class="icon">⚿</span>Acesso do Responsável</div>
+<div class="item"><span class="icon">▣</span>Como Acessar o SUAP?</div></div>
+<div class="group"><div class="group-title">AUTENTICAÇÃO DE DOCUMENTOS</div><div class="item"><span class="icon">▣</span>Documentos Gerais</div></div>
+<div class="group"><div class="group-title">AVALIAÇÕES</div><div class="item"><span class="icon">⌁</span>Avaliação de Estágio</div></div>
+<div class="group"><div class="group-title">CONSULTAS</div>
+<div class="item"><span class="icon">◖</span>Catálogo de telefones</div>
+<div class="item"><span class="icon">▤</span>Processos Físicos</div>
+<div class="item"><span class="icon">✹</span>Registro de Diplomas</div>
+<div class="item"><span class="icon">▤</span>Processos Eletrônicos</div>
+<div class="item"><span class="icon">▤</span>Atividade Docente</div>
+<div class="item"><span class="icon">▦</span>Assuntos de Reuniões</div></div>
+<div class="group"><div class="group-title">EVENTOS</div><div class="item"><span class="icon">✹</span>Realizar Inscrição em Evento</div></div>
+<div class="group"><div class="group-title">SOLICITAÇÕES</div><div class="item"><span class="icon">✹</span>Certificação ENEM/ENCCEJA</div></div>
+</aside>
+<main class="content"><section class="card">
+<div class="logo">suap<small>sistema unificado de<br>administração pública</small></div>
+<div class="section-title"><span class="lock">▣</span>Login</div>
+<form id="loginForm" autocomplete="off">
+<label for="usuario">Usuário:</label><input id="usuario" type="text" autocomplete="off">
+<label for="senha">Senha:</label><input id="senha" type="password" autocomplete="new-password">
+<div class="ext"><span>Usuário Externo?</span><input type="checkbox" aria-label="Usuário Externo"></div>
+<button type="submit">Acessar</button>
+</form>
+<div class="links"><div><a href="#" onclick="return false">Esqueceu ou deseja alterar sua senha?</a></div><div><a href="#" onclick="return false">Primeiro acesso</a></div></div>
+<div id="reveal" class="reveal"><strong>Simulação concluída.</strong><br>Nenhum usuário ou senha foi enviado ao servidor. O exercício registrou apenas o evento da interação.</div>
+</section>
+<div class="footer">© 2026 SUAP | Desenvolvimento: <span>IFSP</span> - 971e1f1de26b</div></main>
+<script>
+const campaign={{ campaign|tojson }};
+document.getElementById("loginForm").addEventListener("submit",async function(e){
+e.preventDefault();
+await fetch("/evento",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:new URLSearchParams({campaign,event:"BOTAO_ACESSAR_CLICADO"})});
+document.getElementById("reveal").style.display="block";
+await fetch("/evento",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},body:new URLSearchParams({campaign,event:"TREINAMENTO_CONCLUIDO"})});
+});
+</script>
+</body></html>
