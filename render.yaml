@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: campanha-antiphishing-ads-ifsp
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: CAMPAIGN_HASH_SALT
+        generateValue: true
